@@ -63,11 +63,13 @@ export class GameValidator {
       this.editor.elements.submitBtn.textContent = UI_STRINGS.SUCCESS;
     }
     this.editor.progressManager?.markLevelComplete?.(this.editor.currentLevel);
+
     let delay = VALIDATOR_CONSTANTS.DELAYS.SUCCESS_MESSAGE;
     const levels = getLevels();
     if (this.editor.currentLevel === levels.length - 1) {
       delay = 6000;
     }
+
     setTimeout(() => {
       this.updateSubmitButton();
       this.navigateToNextLevel();
@@ -84,6 +86,7 @@ export class GameValidator {
     const levels = getLevels();
     const nextLevelIndex =
       this.editor.currentLevel + VALIDATOR_CONSTANTS.NAVIGATION.NEXT_LEVEL;
+
     if (nextLevelIndex < levels.length) {
       this.editor.loadLevel(nextLevelIndex);
     } else {

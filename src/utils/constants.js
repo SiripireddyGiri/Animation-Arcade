@@ -108,6 +108,7 @@ export const VALIDATOR_CONSTANTS = {
     NEXT_LEVEL: 1,
   },
 };
+
 export const getHTMLTemplates = () => ({
   OUTPUT_BOX: `
     <div class="ground">
