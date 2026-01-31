@@ -7,9 +7,8 @@ jest.unstable_mockModule("../src/utils/levelsData.js", () => ({
 }));
 
 const { GameValidator } = await import("../src/utils/validator.js");
-const { VALIDATOR_CONSTANTS, UI_STRINGS } = await import(
-  "../src/utils/constants.js"
-);
+const { VALIDATOR_CONSTANTS, UI_STRINGS } =
+  await import("../src/utils/constants.js");
 
 describe("GameValidator", () => {
   let validator;
@@ -73,7 +72,7 @@ describe("GameValidator", () => {
 
     expect(mockEditor.applyAnimation).toHaveBeenCalledWith(level.expectedCSS);
     expect(mockEditor.progressManager.markLevelComplete).toHaveBeenCalledWith(
-      mockEditor.currentLevel
+      mockEditor.currentLevel,
     );
     expect(mockEditor.elements.submitBtn.textContent).toBe(UI_STRINGS.SUCCESS);
 
@@ -81,7 +80,7 @@ describe("GameValidator", () => {
 
     expect(mockEditor.elements.submitBtn.textContent).toBe(UI_STRINGS.NEXT);
     expect(mockEditor.loadLevel).toHaveBeenCalledWith(
-      mockEditor.currentLevel + VALIDATOR_CONSTANTS.NAVIGATION.NEXT_LEVEL
+      mockEditor.currentLevel + VALIDATOR_CONSTANTS.NAVIGATION.NEXT_LEVEL,
     );
   });
 });

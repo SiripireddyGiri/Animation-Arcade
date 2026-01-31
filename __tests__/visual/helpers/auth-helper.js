@@ -121,15 +121,21 @@ export class AuthTestHelper {
   }
 
   async expectSuccessMessage(message) {
-    await expect(this.messageDiv).toHaveText(message, { timeout: TIMEOUTS.LONG });
+    await expect(this.messageDiv).toHaveText(message, {
+      timeout: TIMEOUTS.LONG,
+    });
   }
 
   async expectInfoMessage(message) {
-    await expect(this.messageDiv).toHaveText(message, { timeout: TIMEOUTS.LONG });
+    await expect(this.messageDiv).toHaveText(message, {
+      timeout: TIMEOUTS.LONG,
+    });
   }
 
   async expectLoggedIn(name) {
-    await expect(this.loginButton).toHaveText(/Logout/, { timeout: TIMEOUTS.LONG });
+    await expect(this.loginButton).toHaveText(/Logout/, {
+      timeout: TIMEOUTS.LONG,
+    });
     await expect(this.welcomeMessage).toBeVisible({ timeout: TIMEOUTS.LONG });
     await expect(this.welcomeMessage).toContainText(`Welcome, ${name}!`);
   }

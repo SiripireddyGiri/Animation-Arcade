@@ -1,5 +1,9 @@
 import { expect } from "@playwright/test";
-import { DARK_THEME, LIGHT_THEME, STORAGE_KEYS } from "../../../src/utils/constants.js";
+import {
+  DARK_THEME,
+  LIGHT_THEME,
+  STORAGE_KEYS,
+} from "../../../src/utils/constants.js";
 
 const WAIT_TIMEOUT = 100;
 
@@ -24,14 +28,14 @@ export class ThemeTestHelper {
   async getThemeFromLocalStorage() {
     return await this.page.evaluate(
       (key) => localStorage.getItem(key),
-      STORAGE_KEYS.THEME
+      STORAGE_KEYS.THEME,
     );
   }
 
   async setThemeInLocalStorage(theme) {
     await this.page.evaluate(
       ({ key, value }) => localStorage.setItem(key, value),
-      { key: STORAGE_KEYS.THEME, value: theme }
+      { key: STORAGE_KEYS.THEME, value: theme },
     );
   }
 

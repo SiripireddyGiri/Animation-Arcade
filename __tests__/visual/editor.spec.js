@@ -95,7 +95,9 @@ class GamePage {
 
   async navigateLevel(direction) {
     const arrow =
-      direction > CONFIG.levels.decrement ? selectors.nextArrow : selectors.prevArrow;
+      direction > CONFIG.levels.decrement
+        ? selectors.nextArrow
+        : selectors.prevArrow;
     await this.page.click(arrow);
     await this.page.waitForTimeout(CONFIG.timeouts.medium);
   }
@@ -115,7 +117,9 @@ class GamePage {
   }
 
   async getCurrentLevel() {
-    return (await this.page.locator(selectors.currentLevel).textContent()) || "";
+    return (
+      (await this.page.locator(selectors.currentLevel).textContent()) || ""
+    );
   }
 
   async getTotalLevels() {
@@ -132,7 +136,8 @@ class GamePage {
 
   hasStateClass(className) {
     return (
-      className.includes(CONFIG.states.correct) || className.includes(CONFIG.states.error)
+      className.includes(CONFIG.states.correct) ||
+      className.includes(CONFIG.states.error)
     );
   }
 
@@ -157,7 +162,9 @@ test.describe("GameEditor Core Functionality", () => {
     await gamePage.navigateLevel(CONFIG.levels.increment);
 
     const nextLevel = await gamePage.getCurrentLevel();
-    expect(parseInt(nextLevel)).toBe(parseInt(initialLevel) + CONFIG.levels.increment);
+    expect(parseInt(nextLevel)).toBe(
+      parseInt(initialLevel) + CONFIG.levels.increment,
+    );
 
     await gamePage.navigateLevel(CONFIG.levels.decrement);
     const previousLevel = await gamePage.getCurrentLevel();

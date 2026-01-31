@@ -27,12 +27,21 @@ export const TEST_USERS = {
   },
   DUPLICATE: {
     name: fallback(process.env.TEST_USER_DUPLICATE_NAME, "Duplicate User"),
-    email: fallback(process.env.TEST_USER_DUPLICATE_EMAIL, "duplicate@example.com"),
-    password: fallback(process.env.TEST_USER_DUPLICATE_PASSWORD, "Duplicate@123"),
+    email: fallback(
+      process.env.TEST_USER_DUPLICATE_EMAIL,
+      "duplicate@example.com",
+    ),
+    password: fallback(
+      process.env.TEST_USER_DUPLICATE_PASSWORD,
+      "Duplicate@123",
+    ),
   },
   DUPLICATE_ATTEMPT: {
     name: "Duplicate Attempt",
-    email: fallback(process.env.TEST_USER_DUPLICATE_EMAIL, "duplicate@example.com"),
+    email: fallback(
+      process.env.TEST_USER_DUPLICATE_EMAIL,
+      "duplicate@example.com",
+    ),
     password: "DifferentPassword@123",
   },
   LOGIN: {
