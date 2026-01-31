@@ -1,0 +1,279 @@
+[
+  {
+    "id": 1,
+    "title": "Level 1: Position the Cricket Ball",
+    "description": "Welcome to the cricket game! The ball is at the bowler's hand. We need to get it to the batting crease to start the match.",
+    "code": [".ball {", "  transform: _____;", "}"],
+    "blanks": [{ "line": 1, "answer": "translateX(200px)" }],
+    "answer": "translateX(200px)",
+    "keyword": "transform",
+    "hints": {
+      "concept": "Use translateX() to move horizontally. Positive values move to the right.",
+      "css": "transform: translateX(100px);"
+    },
+    "question": "Move the ball 200px to the right.",
+    "expectedCSS": "transform: translateX(200px);"
+  },
+  {
+    "id": 2,
+    "title": "Level 2: Spin the Ball",
+    "description": "Good! The ball is in position. But a good bowler adds spin to make it harder to hit. Let's give it some rotation.",
+    "code": [".ball {", "  transform: _____;", "}"],
+    "blanks": [{ "line": 1, "answer": "rotate(45deg)" }],
+    "answer": "rotate(45deg)",
+    "keyword": "transform",
+    "hints": {
+      "concept": "rotate() takes degrees (deg). Positive numbers rotate clockwise.",
+      "css": "transform: rotate(90deg);"
+    },
+    "question": "Rotate the ball 45 degrees.",
+    "expectedCSS": "transform: rotate(45deg);"
+  },
+  {
+    "id": 3,
+    "title": "Level 3: Make the Ball Visible",
+    "description": "Perfect spin! But the camera crew says the ball is too small on screen. The viewers at home can barely see it.",
+    "code": [".ball {", "  transform: _____;", "}"],
+    "blanks": [{ "line": 1, "answer": "scale(1.5)" }],
+    "answer": "scale(1.5)",
+    "keyword": "transform",
+    "hints": {
+      "concept": "scale() resizes the element. 1.0 is normal size, 1.5 is 50% larger.",
+      "css": "transform: scale(2);"
+    },
+    "question": "Scale the ball to 1.5 times larger.",
+    "expectedCSS": "transform: scale(1.5);"
+  },
+  {
+    "id": 4,
+    "title": "Level 4: Set Up the Bowling Position",
+    "description": "Great! Now the director wants a perfect shot. The ball needs to be at the right distance and the right size for the close-up camera angle.",
+    "code": [".ball {", "  transform: _____ _____;", "}"],
+    "blanks": [{ "line": 1, "answer": "translateX(150px) scale(2)" }],
+    "answer": "translateX(150px) scale(2)",
+    "keyword": "transform",
+    "hints": {
+      "concept": "You can apply multiple transforms by separating them with a space.",
+      "css": "transform: translateX(50px) scale(1.5);"
+    },
+    "question": "Move the ball 150px right and double its size.",
+    "expectedCSS": "transform: translateX(150px) scale(2);"
+  },
+  {
+    "id": 5,
+    "title": "Level 5: Create the Perfect Delivery Stance",
+    "description": "The bowler is ready for the match-winning delivery! This needs perfect positioning, maximum spin, and camera-ready sizing all at once.",
+    "code": [".ball {", "  transform: _____ _____ _____;", "}"],
+    "blanks": [
+      { "line": 1, "answer": "translateX(120px) rotate(180deg) scale(1.8)" }
+    ],
+    "answer": "translateX(120px) rotate(180deg) scale(1.8)",
+    "keyword": "transform",
+    "hints": {
+      "concept": "Order matters! Translations are affected by rotation. Usually translate first.",
+      "css": "transform: translateX(50px) rotate(45deg) scale(1.2);"
+    },
+    "question": "Move 120px right, rotate 180 degrees, and scale to 1.8x.",
+    "expectedCSS": "transform: translateX(120px) rotate(180deg) scale(1.8);"
+  },
+  {
+    "id": 6,
+    "title": "Level 6: Animate the Delivery",
+    "description": "The ball jumps instantly! That looks unrealistic. Real cricket balls travel smoothly through the air from bowler to batsman.",
+    "code": [
+      ".ball {",
+      "  transform: translateX(200px);",
+      "  transition: _____;",
+      "}"
+    ],
+    "blanks": [{ "line": 2, "answer": "transform 2s" }],
+    "answer": "transform 2s",
+    "keyword": "transition",
+    "hints": {
+      "concept": "Use transition to smooth out changes. Syntax: property duration.",
+      "css": "transition: transform 1s;"
+    },
+    "question": "Add a 2-second transition.",
+    "expectedCSS": "transform: translateX(200px); transition: transform 2s;"
+  },
+  {
+    "id": 7,
+    "title": "Level 7: Perfect the Bowling Speed",
+    "description": "Better! But fast bowlers don't move at constant speed. They start the run-up slow, accelerate in the middle, then release smoothly.",
+    "code": [
+      ".ball {",
+      "  transform: translateX(200px);",
+      "  transition: _____;",
+      "}"
+    ],
+    "blanks": [{ "line": 2, "answer": "transform 1.5s ease-in-out" }],
+    "answer": "transform 1.5s ease-in-out",
+    "keyword": "transition",
+    "hints": {
+      "concept": "Timing functions control acceleration. ease-in-out starts and ends slowly.",
+      "css": "transition: transform 0.5s ease-in;"
+    },
+    "question": "Make it 1.5 seconds with ease-in-out timing.",
+    "expectedCSS": "transform: translateX(200px); transition: transform 1.5s ease-in-out;"
+  },
+  {
+    "id": 8,
+    "title": "Level 8: Add Ball Visibility Effects",
+    "description": "The ball is traveling fast now! Add some motion blur effect - the ball should fade slightly as it grows and moves, just like in slow-motion replays.",
+    "code": [
+      ".ball {",
+      "  transform: translateX(180px) scale(1.6);",
+      "  opacity: 0.7;",
+      "  transition: _____, _____;",
+      "}"
+    ],
+    "blanks": [
+      { "line": 3, "answer": "transform 2s ease-out, opacity 1s linear" }
+    ],
+    "answer": "transform 2s ease-out, opacity 1s linear",
+    "keyword": "transition",
+    "hints": {
+      "concept": "Separate multiple transitions with a comma.",
+      "css": "transition: transform 1s ease, opacity 0.5s linear;"
+    },
+    "question": "Transition transform over 2s ease-out, opacity over 1s linear.",
+    "expectedCSS": "transform: translateX(180px) scale(1.6); opacity: 0.7; transition: transform 2s ease-out, opacity 1s linear;"
+  },
+  {
+    "id": 9,
+    "title": "Level 9: Make the Ball Bounce",
+    "description": "The ball hits the pitch! Every good delivery bounces once before reaching the batsman. Let's add that bounce effect.",
+    "code": [".ball {", "  animation: _____ _____;", "}"],
+    "blanks": [{ "line": 1, "answer": "bounce 2s" }],
+    "answer": "bounce 2s",
+    "keyword": "animation",
+    "hints": {
+      "concept": "For animations, specify the keyframe name and duration.",
+      "css": "animation: bounce 1s;"
+    },
+    "question": "Apply the 'bounce' animation for 2 seconds.",
+    "expectedCSS": "animation: bounce 2s;",
+    "keyframes": "@keyframes bounce {\n  0% {\n    transform: translateY(0);\n  }\n  50% {\n    transform: translateY(-30px);\n  }\n  100% {\n    transform: translateY(0);\n  }\n}"
+  },
+  {
+    "id": 10,
+    "title": "Level 10: Continuous Ball Spin",
+    "description": "Nice bounce! But the ball stops spinning after one rotation. In real cricket, the ball keeps spinning throughout its flight.",
+    "code": [".ball {", "  animation: _____ _____ _____;", "}"],
+    "blanks": [{ "line": 1, "answer": "spin 1s infinite" }],
+    "answer": "spin 1s infinite",
+    "keyword": "animation",
+    "hints": {
+      "concept": "Add 'infinite' to make the animation repeat forever.",
+      "css": "animation: spin 2s infinite;"
+    },
+    "question": "Make 'spin' animation run for 1s and repeat infinitely.",
+    "expectedCSS": "animation: spin 1s infinite;",
+    "keyframes": "@keyframes spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}"
+  },
+  {
+    "id": 11,
+    "title": "Level 11: Ball Moving Back and Forth",
+    "description": "It's practice time! The coach wants the ball to move back and forth between bowler and batsman for practice drills.",
+    "code": [".ball {", "  animation: _____ _____ _____ _____;", "}"],
+    "blanks": [{ "line": 1, "answer": "slide 2s infinite alternate" }],
+    "answer": "slide 2s infinite alternate",
+    "keyword": "animation",
+    "hints": {
+      "concept": "Use 'alternate' to play the animation forward then backward.",
+      "css": "animation: slide 1s infinite alternate;"
+    },
+    "question": "Make 'slide' run 2s, infinite, and alternate direction.",
+    "expectedCSS": "animation: slide 2s infinite alternate;",
+    "keyframes": "@keyframes slide {\n  0% {\n    transform: translateX(0);\n  }\n  100% {\n    transform: translateX(150px);\n  }\n}"
+  },
+  {
+    "id": 12,
+    "title": "Level 12: Realistic Ball Wobble",
+    "description": "The commentators notice something! The ball's seam is causing it to wobble in the air - this is what makes it so hard to hit!",
+    "code": [".ball {", "  animation: _____ _____ _____ _____ _____;", "}"],
+    "blanks": [
+      { "line": 1, "answer": "wobble 1.8s ease-in-out infinite alternate" }
+    ],
+    "answer": "wobble 1.8s ease-in-out infinite alternate",
+    "keyword": "animation",
+    "hints": {
+      "concept": "Combine timing (ease-in-out) with iteration and direction.",
+      "css": "animation: wobble 1s ease-in infinite alternate;"
+    },
+    "question": "Apply 'wobble' for 1.8s with ease-in-out, infinite, alternate.",
+    "expectedCSS": "animation: wobble 1.8s ease-in-out infinite alternate;",
+    "keyframes": "@keyframes wobble {\n  0% {\n    transform: rotate(-5deg);\n  }\n  50% {\n    transform: rotate(5deg);\n  }\n  100% {\n    transform: rotate(-5deg);\n  }\n}"
+  },
+  {
+    "id": 13,
+    "title": "Level 13: Delayed Power Shot",
+    "description": "The batsman sees the ball coming! He winds up his bat, takes a breath, then BOOM - a powerful shot! We need a delay before the action.",
+    "code": [
+      ".ball {",
+      "  animation: _____ _____ _____ _____ _____ _____;",
+      "}"
+    ],
+    "blanks": [
+      { "line": 1, "answer": "pulse 2s ease-in 0.5s infinite alternate" }
+    ],
+    "answer": "pulse 2s ease-in 0.5s infinite alternate",
+    "keyword": "animation",
+    "hints": {
+      "concept": "The delay value comes AFTER the duration value.",
+      "css": "animation: pulse 1s ease 2s infinite alternate;"
+    },
+    "question": "Apply 'pulse' 2s, ease-in, 0.5s delay, infinite, alternate.",
+    "expectedCSS": "animation: pulse 2s ease-in 0.5s infinite alternate;",
+    "keyframes": "@keyframes pulse {\n  0% {\n    transform: scale(1);\n    opacity: 1;\n  }\n  50% {\n    transform: scale(1.2);\n    opacity: 0.8;\n  }\n  100% {\n    transform: scale(1);\n    opacity: 1;\n  }\n}"
+  },
+  {
+    "id": 14,
+    "title": "Level 14: Complex Shot Animation",
+    "description": "SIX! The ball is flying through the air with incredible trajectory - spinning, scaling, and fading all at once as it soars toward the boundary!",
+    "code": [
+      ".ball {",
+      "  animation: _____ _____ _____ _____ _____;",
+      "  transform: rotate(0deg);",
+      "  opacity: 1;",
+      "}"
+    ],
+    "blanks": [
+      { "line": 1, "answer": "complex 3s ease-in-out 0.3s infinite alternate" }
+    ],
+    "answer": "complex 3s ease-in-out 0.3s infinite alternate",
+    "keyword": "animation",
+    "hints": {
+      "concept": "The complex animation handles position. The other properties are static starts.",
+      "css": "animation: complex 2s ease 0s infinite alternate;"
+    },
+    "question": "Apply 'complex' 3s, ease-in-out, 0.3s delay, infinite, alternate.",
+    "expectedCSS": "animation: complex 3s ease-in-out 0.3s infinite alternate; transform: rotate(0deg); opacity: 1;",
+    "keyframes": "@keyframes complex {\n  0% {\n    transform: rotate(0deg) scale(1);\n    opacity: 1;\n  }\n  25% {\n    transform: rotate(90deg) scale(1.2);\n    opacity: 0.9;\n  }\n  50% {\n    transform: rotate(180deg) scale(0.8);\n    opacity: 0.7;\n  }\n  75% {\n    transform: rotate(270deg) scale(1.2);\n    opacity: 0.9;\n  }\n  100% {\n    transform: rotate(360deg) scale(1);\n    opacity: 1;\n  }\n}"
+  },
+  {
+    "id": 15,
+    "title": "Level 15: Master Shot - The Final Delivery",
+    "description": "This is it - the final ball of the match! Everything must be perfect: the position, the spin, the size, the timing. The entire stadium holds its breath...",
+    "code": [
+      ".ball {",
+      "  transform: _____ _____ _____;",
+      "  animation: _____ _____ _____ _____ _____ _____;",
+      "  opacity: 0.85;",
+      "}"
+    ],
+    "blanks": [
+      { "line": 1, "answer": "translateX(100px) rotate(45deg) scale(1.4)" },
+      { "line": 2, "answer": "master 2.5s ease-in-out 0.2s infinite alternate" }
+    ],
+    "answer": "translateX(100px) rotate(45deg) scale(1.4) AND master 2.5s ease-in-out 0.2s infinite alternate",
+    "keyword": "animation",
+    "hints": {
+      "concept": "Define the static transform first. Then add the master animation below it.",
+      "css": "transform: translateX(10px) ...; animation: master 1s ...;"
+    },
+    "question": "Transform: move 100px right, rotate 45deg, scale 1.4x. Animate: 'master' 2.5s, ease-in-out, 0.2s delay, infinite, alternate.",
+    "expectedCSS": "transform: translateX(100px) rotate(45deg) scale(1.4); animation: master 2.5s ease-in-out 0.2s infinite alternate; opacity: 0.85;",
+    "keyframes": "@keyframes master {\n  0% {\n    transform: translateX(0) translateY(0) rotate(0deg);\n    opacity: 0.85;\n  }\n  25% {\n    transform: translateX(50px) translateY(-20px) rotate(45deg);\n    opacity: 0.9;\n  }\n  50% {\n    transform: translateX(100px) translateY(0) rotate(90deg);\n    opacity: 0.85;\n  }\n  75% {\n    transform: translateX(50px) translateY(20px) rotate(180deg);\n    opacity: 0.9;\n  }\n  100% {\n    transform: translateX(0) translateY(0) rotate(360deg);\n    opacity: 0.85;\n  }\n}"
+  }
+]
