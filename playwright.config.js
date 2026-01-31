@@ -1,0 +1,51 @@
+import { defineConfig } from "@playwright/test";
+export default defineConfig({
+  testDir: "./__tests__/visual",
+  outputDir: "test-results",
+  fullyParallel: true,
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 2 : 4,
+  reporter: [
+    ["html", { outputFolder: "playwright-report", open: "never" }],
+    ["list"],
+  ],
+  timeout: 50000,
+  use: {
+    baseURL: "http://localhost:5173",
+    viewport: { width: 1280, height: 720 },
+    deviceScaleFactor: 1,
+    isMobile: false,
+    hasTouch: false,
+    screenshot: "on",
+    trace: "on-first-retry",
+    launchOptions: {
+      args: [
+        "--disable-font-subpixel-positioning",
+        "--disable-lcd-text",
+        "--force-device-scale-factor=1",
+      ],
+    },
+  },
+  expect: {
+    toHaveScreenshot: {
+      animations: "disabled",
+      maxDiffPixelRatio: 0.03,
+      timeout: 10000,
+    },
+  },
+  projects: [
+    {
+      name: "chromium",
+      use: {
+        browserName: "chromium",
+      },
+    },
+  ],
+  webServer: {
+    command: "npm run dev",
+    url: "http://localhost:5173",
+    reuseExistingServer: !process.env.CI,
+    timeout: 120000,
+  },
+});
