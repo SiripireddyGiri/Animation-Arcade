@@ -1,3 +1,52 @@
+body,
+.top-bar,
+.header-actions,
+.home-btn,
+.theme-toggle,
+.editor-container,
+.editor-input,
+.editor-footer,
+.hints,
+.right-section,
+.levels-bar,
+.output-box,
+.navbar,
+.page-description,
+.feature-card,
+.step,
+.modal,
+.login-btn,
+.tab-btn,
+.input {
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-editor-panel);
+  box-shadow: var(--shadow);
+}
+
+.theme-icon img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 body.dark-theme {
   --bg-color: #1a1d23;
   --surface-color: #252931;
@@ -44,11 +93,6 @@ body.dark-theme .submit-btn {
   color: #1f2933;
 }
 
-body.dark-theme .theme-toggle:hover {
-  border-color: var(--border-light);
-  background-color: var(--bg-editor-panel);
-}
-
 body.dark-theme .top-bar {
   background-color: var(--bg-top-bar);
 }
@@ -70,6 +114,11 @@ body.dark-theme .theme-toggle {
 body.dark-theme .login-btn:hover,
 body.dark-theme .theme-toggle:hover {
   background-color: #3a3f4b;
+}
+
+body.dark-theme .theme-toggle:hover {
+  border-color: var(--border-light);
+  background-color: var(--bg-editor-panel);
 }
 
 body.dark-theme .page-description {
@@ -116,53 +165,4 @@ body.dark-theme input:focus {
 body.dark-theme .auth-footer {
   border-top-color: var(--border-color);
   color: var(--muted-text);
-}
-
-body,
-.top-bar,
-.header-actions,
-.home-btn,
-.theme-toggle,
-.editor-container,
-.editor-input,
-.editor-footer,
-.hints,
-.right-section,
-.levels-bar,
-.output-box,
-.navbar,
-.page-description,
-.feature-card,
-.step,
-.modal,
-.login-btn,
-.tab-btn,
-input {
-  transition:
-    background-color var(--transition),
-    color var(--transition),
-    border-color var(--transition),
-    box-shadow var(--transition);
-}
-
-.theme-toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.6rem;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius);
-  background: transparent;
-  cursor: pointer;
-  transition: all var(--transition);
-}
-
-.theme-toggle:hover {
-  background-color: var(--bg-editor-panel);
-  box-shadow: var(--shadow);
-}
-
-.theme-icon img {
-  width: 1.2rem;
-  height: 1.2rem;
 }
