@@ -23,9 +23,11 @@ const AuthModal = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     if (isOpen) {
-      setCurrentTab(TABS.LOGIN);
-      setFormData({ name: "", email: "", password: "", confirmPassword: "" });
-      setErrors({});
+      setTimeout(() => {
+        setCurrentTab(TABS.LOGIN);
+        setFormData({ name: "", email: "", password: "", confirmPassword: "" });
+        setErrors({});
+      }, 0);
     }
   }, [isOpen]);
 
