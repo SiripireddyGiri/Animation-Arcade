@@ -91,7 +91,6 @@ input.input-error {
 }
 
 @keyframes shake {
-
   0%,
   100% {
     transform: translateX(0);
